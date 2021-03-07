@@ -8,14 +8,14 @@ import (
 )
 
 // 流程控制: for/if/else/switch/defer
-func main()  {
+func main() {
 	sum := 0
 	for i := 0; i < 10; i++ {
 		sum += 1
 	}
 	fmt.Println("for loop:", sum)
 
-	for ; sum < 100; {
+	for sum < 100 {
 		sum++
 	}
 	fmt.Println("for loop2:", sum)

@@ -6,13 +6,13 @@ import (
 )
 
 var (
-	ToBe bool = false
-	MaxInt uint64 = 1 << 64 -1
-	z complex128 = cmplx.Sqrt(-5 + 12i)
+	ToBe   bool       = false
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
 )
 
 const (
-	Big = 1 << 100
+	Big   = 1 << 100
 	Small = Big >> 99
 )
 
@@ -46,7 +46,7 @@ func main() {
 }
 
 func needInt(x int) int {
-	return x * 10 + 1
+	return x*10 + 1
 }
 
 func needFloat(x float64) float64 {

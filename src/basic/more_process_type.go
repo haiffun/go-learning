@@ -14,11 +14,11 @@ var (
 	v1 = Vertex{1, 2}  // 创建一个 Vertex 类型的结构体
 	v2 = Vertex{X: 1}  // Y:0 被隐式地赋予
 	v3 = Vertex{}      // X:0 Y:0
-	p1  = &Vertex{1, 2} // 创建一个 *Vertex 类型的结构体（指针）
+	p1 = &Vertex{1, 2} // 创建一个 *Vertex 类型的结构体（指针）
 )
 
 // 指针、结构体、数组(切片)
-func main()  {
+func main() {
 	i, j := 42, 2701
 
 	// 指针
@@ -171,7 +171,7 @@ func main()  {
 	}
 	fmt.Println(m["Bell Labs"])
 
-	m = map[string]Vertex {
+	m = map[string]Vertex{
 		"Bell Labs": {
 			40, -74,
 		},
