@@ -1,3 +1,4 @@
+// 基础语法
 package main
 
 import (

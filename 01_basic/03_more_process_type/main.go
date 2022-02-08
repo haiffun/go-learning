@@ -1,10 +1,11 @@
+// 更多的处理类型
 package main
 
 import (
 	"fmt"
 )
 
-// 结构体: 即一组字段
+// Vertex 结构体: 即一组字段
 type Vertex struct {
 	X int // 结构体字段
 	Y int
