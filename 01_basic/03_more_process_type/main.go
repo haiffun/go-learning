@@ -1,4 +1,4 @@
-// 更多的处理类型
+// 复合数据类型
 package main
 
 import (
@@ -18,7 +18,7 @@ var (
 	p1 = &Vertex{1, 2} // 创建一个 *Vertex 类型的结构体（指针）
 )
 
-// 指针、结构体、数组(切片)
+// 指针、结构体、数组、切片
 func main() {
 	i, j := 42, 2701
 
@@ -54,13 +54,19 @@ func main() {
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 	fmt.Println(primes)
 
-	// 切片
-	fmt.Println("array split ====================")
+	// ...表示数组长度根据初始化值的个数计算
+	month := [...]string{1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
+		7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
+	fmt.Println(month)
+
+	// 切片 slice
+	fmt.Println("slice ====================")
 
 	s := primes[1:4] // [1,4)
 	fmt.Println(s)
 
-	names := [4]string{
+	// slice可以不指明长度，会隐式创建一个合适大小的数组然后slice的指针指向底层数组
+	names := []string{
 		"John",
 		"Paul",
 		"George",
@@ -113,7 +119,7 @@ func main() {
 		fmt.Println("array3 is nil!")
 	}
 
-	// make函数, 创建动态数组
+	// make函数, 创建指定元素类型、长度和容量的slice, 底层会创建一个匿名数组, 然后返回一个slice
 	fmt.Println("array4 make ====================")
 
 	array4a := make([]int, 0, 5) // 分配一个元素为零值的数组并返回一个引用它的切片, 长度为0, 容量为5
