@@ -3,7 +3,6 @@ package main
 
 import (
 	"fmt"
-	"go-learning/02_func/utils"
 )
 
 // 执行顺序：全局参数初始化 -> init -> main
@@ -22,11 +21,26 @@ func main() {
 	subNum := subFunc(num, 2)
 	fmt.Println(subNum)
 
-	subNum = utils.Sum(num, 2)
+	subFunc2 := sub2
+	// 函数类型/函数值
+	fmt.Printf("%T\n", subFunc)
+	fmt.Printf("%T\n", subFunc2)
+
+	// 函数值的零值是nil，函数值只能与nil比较，函数值之间不能比较
+	if subFunc != nil {
+		subFunc(1, 2)
+	}
+
+	subNum = Sum(num, 2)
 	fmt.Println(subNum)
 }
 
 func sub(val1 int, val2 int) (sum int) {
+	sum = val1 + val2
+	return
+}
+
+func sub2(val1 int, val2 int) (sum int) {
 	sum = val1 + val2
 	return
 }
