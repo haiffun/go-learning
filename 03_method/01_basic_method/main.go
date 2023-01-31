@@ -24,4 +24,6 @@ func main() {
 	q := Point{6, 8}
 	fmt.Println(p.Distance(q))
 	fmt.Println(Distance(p, q))
+
+	fmt.Printf("%T\n", p.Distance)
 }
