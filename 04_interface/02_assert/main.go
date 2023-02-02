@@ -34,9 +34,21 @@ func main() {
 	var f1 F1
 	f1 = new(S2)
 
+	// 类型是F1，动态类型是*S2
+	f1.m1()
+
 	r1 := f1.(*S2)
+	// 类型是*S2
+	r1.m1()
+	r1.m2()
+	fmt.Printf("%T\n", r1)
 	fmt.Println(r1)
 
 	r2 := f1.(F2)
+
+	// 类型是F2，动态类型是*S2
+	r2.m1()
+	r2.m2()
 	fmt.Printf("%T\n", r2)
+	fmt.Println(r2)
 }
